@@ -1,0 +1,22 @@
+{
+  "Category": "Honda",
+  "Title": null,
+  "Description": "NSX Dash with more informations",
+  "Author": "Luvwahraan",
+  "ScreenCount": 3.0,
+  "InGameScreensIndexs": [
+    0,
+    1,
+    2
+  ],
+  "IdleScreensIndexs": [],
+  "MainPreviewIndex": 0,
+  "IsOverlay": false,
+  "ShowInTaskBar": true,
+  "Width": 690.0,
+  "Height": 450.0,
+  "OverlaySizeWarning": false,
+  "MetadataVersion": 2.0,
+  "EnableOnDashboardMessaging": true,
+  "PitScreensIndexs": []
+}
