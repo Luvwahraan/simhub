@@ -1,0 +1,20 @@
+{
+  "Category": "Mobile",
+  "Title": null,
+  "Description": "Times and gap about car ahead/behind.",
+  "Author": "Luvwahraan",
+  "ScreenCount": 1.0,
+  "InGameScreensIndexs": [
+    0
+  ],
+  "IdleScreensIndexs": [],
+  "MainPreviewIndex": 0,
+  "IsOverlay": false,
+  "ShowInTaskBar": true,
+  "Width": 360.0,
+  "Height": 640.0,
+  "OverlaySizeWarning": false,
+  "MetadataVersion": 2.0,
+  "EnableOnDashboardMessaging": true,
+  "PitScreensIndexs": []
+}
