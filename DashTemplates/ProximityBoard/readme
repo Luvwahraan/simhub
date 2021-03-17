@@ -1,1 +1,25 @@
 
+Last LAP color: 
+  Grey: worst time than player by 1s
+  white:  better time by max 1s
+  yellow graduate: better time between 1 and 5s 
+
+GAP is gap between driver and player.
+Color is graduating:
+  ahead:
+    green: lesser than 1s
+    white: 2.5s
+    yellow: more than 4s
+  behind:
+    yellow: lesser than .8s
+    white: 1.5s
+    green: more than 2s
+    
+LGAP is gap betweer driver/player and leader.
+Color is fixed,:
+  orange: more laps than player (let him pass)
+  white: same lap as player
+  blue: player has more laps (he should let player pass)
+Same color scheme is applied to driver's names.
+
+Player's infos are just last laptime and gap to leader.
