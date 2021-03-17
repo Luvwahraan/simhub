@@ -1,7 +1,7 @@
 {
   "$id": "1",
   "Version": 2,
-  "Id": "6c3ff2ad-b17f-4dfd-8bd8-d1be6f702520",
+  "Id": "cd9945f8-047a-4b83-b6ae-71609777f104",
   "BaseHeight": 640,
   "BaseWidth": 360,
   "BackgroundColor": "#FF000000",
@@ -1134,7 +1134,7 @@
                 }
               },
               "RenderingSkip": 0,
-              "ShowSelection": false,
+              "ShowSelection": true,
               "CanResize": false,
               "Childrens": {
                 "$id": "91",
@@ -1453,7 +1453,7 @@
                     "IsFreezed": false,
                     "IsSelected": false,
                     "Name": "leaderGap",
-                    "RenderingSkip": 70,
+                    "RenderingSkip": 180,
                     "Sid": 0,
                     "Bindings": {
                       "$id": "117",
@@ -1463,7 +1463,7 @@
                         "Formula": {
                           "$id": "119",
                           "Interpreter": 1,
-                          "Expression": "// Shows lap if different from player's current lap,\r\n// or gap to learder.\r\n\r\nlet pPos = format(repeatindex()-1,'00');\r\nif ($prop('PersistantTrackerPlugin.DriverAhead_'+pPos+'_Name') == null) return '';\r\n\r\nlet pLap = getLeaderLap();\r\nlet lap = $prop('PersistantTrackerPlugin.DriverAhead_'+pPos+'_CurrentLap');\r\nlet lapDiff = pLap - lap;\r\nlet ret = '';\r\n\r\nif (lapDiff != 0) {\r\n\tret += format(lapDiff, '0', true)+'L';\r\n} else {\t\r\n\tlet gap = drivergaptoleader($prop('PersistantTrackerPlugin.DriverAhead_'+pPos+'_Position'));\r\n\tif (gap > 60) {\r\n\t\treturn Math.round(gap/60)+'\\'';\r\n\t}\r\n\tret += format(gap, '00.0', true);\r\n}\r\n\r\nif (ret == '') { return '+00.00'; } \r\n\r\nreturn ret;"
+                          "Expression": "// Shows lap if different from player's current lap,\r\n// or gap to learder.\r\n\r\nlet pPos = format(repeatindex()-1,'00');\r\nif ($prop('PersistantTrackerPlugin.DriverAhead_'+pPos+'_Name') == null) return '';\r\n\r\nlet pLap = getLeaderLap();\r\nlet lap = $prop('PersistantTrackerPlugin.DriverAhead_'+pPos+'_CurrentLap');\r\nlet lapDiff = pLap - lap;\r\nlet ret = '';\r\n\r\nif (lapDiff > 1 || lapDiff < 1 && lapDiff != 0) {\r\n\tret += format(lapDiff, '0', true)+'L';\r\n} else {\t\r\n\tlet gap = drivergaptoleader($prop('PersistantTrackerPlugin.DriverAhead_'+pPos+'_Position'));\r\n\tif (Math.abs(gap) > 60) {\r\n\t\treturn Math.round(gap/60)+'\\'';\r\n\t}\r\n\tret += format(gap, '00.0', true);\r\n}\r\n\r\nif (ret == '') { return '+00.00'; } \r\n\r\nreturn ret;"
                         },
                         "Mode": 2,
                         "TargetPropertyName": "Text"
@@ -1473,11 +1473,11 @@
                         "Formula": {
                           "$id": "121",
                           "Interpreter": 1,
-                          "Expression": "// Shows lap if different from player's current lap,\r\n// or gap to learder.\r\n\r\nlet pPos = format(repeatindex()-1,'00');\r\nlet pLap = drivercurrentlap(1);\r\n\r\nlet lap = $prop('PersistantTrackerPlugin.DriverAhead_'+pPos+'_CurrentLap');\r\nreturn pLap - lap;"
+                          "Expression": "let pPos = format(repeatindex()-1,'00');\r\n\r\nlet lap = $prop('PersistantTrackerPlugin.DriverAhead_'+pPos+'_CurrentLap');\r\nlet playerLap = $prop('DataCorePlugin.GameRawData.Graphics.CompletedLaps');\r\nlet playerDiff = playerLap - lap;\r\n\r\nif (playerDiff < 0) return 0;\r\nelse if (playerDiff > 0) return 3;\r\nreturn 1;"
                         },
-                        "StartColor": "#FFFFFFFF",
-                        "EnableMiddleColor": false,
-                        "MiddleColor": "#FF000000",
+                        "StartColor": "#FFFFA500",
+                        "EnableMiddleColor": true,
+                        "MiddleColor": "#FFFFFFFF",
                         "MiddleColorValue": 1.0,
                         "EndColor": "#FF5757FF",
                         "StartColorValue": 0.0,
@@ -1546,9 +1546,9 @@
                     "BorderTop": 0,
                     "Id": "8bfdd2a3-e554-4c36-b943-a794aea80a64",
                     "IsFreezed": false,
-                    "IsSelected": true,
+                    "IsSelected": false,
                     "Name": "playerGap",
-                    "RenderingSkip": 70,
+                    "RenderingSkip": 16,
                     "Sid": 0,
                     "Bindings": {
                       "$id": "125",
@@ -1558,7 +1558,7 @@
                         "Formula": {
                           "$id": "127",
                           "Interpreter": 1,
-                          "Expression": "// Shows lap if different from player's current lap,\r\n// or gap to learder.\r\n\r\nlet pPos = format(repeatindex()-1,'00');\r\nif ($prop('PersistantTrackerPlugin.DriverAhead_'+pPos+'_Name') == null) return '';\r\nreturn format(gap, '00.00', true);\r\n\r\n/*\r\nlet pLap = $prop('DataCorePlugin.GameData.CompletedLaps');\r\nlet lap = $prop('PersistantTrackerPlugin.DriverAhead_'+pPos+'_CurrentLap');\r\nlet lapDiff = pLap - lap;\r\n\r\nlet ret = '';\r\n\r\nif (lapDiff != 0) {\r\n\tret += format(lapDiff, '0', true)+'L';\r\n} else {\t\r\n\tlet gap = $prop('PersistantTrackerPlugin.DriverAhead_'+pPos+'_Gap');\r\n\tif (gap > 60) {\r\n\t\treturn Math.round(gap/60)+'\\'';\r\n\t}\r\n\tret += format(gap, '00.00', true);\r\n}\r\n\r\nreturn ret;*/"
+                          "Expression": "// Shows lap if different from player's current lap,\r\n// or gap to learder.\r\n\r\nlet pPos = format(repeatindex()-1,'00');\r\nif ($prop('PersistantTrackerPlugin.DriverAhead_'+pPos+'_Name') == null) return '';\r\nlet gap = $prop('PersistantTrackerPlugin.DriverAhead_'+pPos+'_Gap');\r\nreturn format(gap, '00.00', true);\r\n\r\n/*\r\nlet pLap = $prop('DataCorePlugin.GameData.CompletedLaps');\r\nlet lap = $prop('PersistantTrackerPlugin.DriverAhead_'+pPos+'_CurrentLap');\r\nlet lapDiff = pLap - lap;\r\n\r\nlet ret = '';\r\n\r\nif (lapDiff != 0) {\r\n\tret += format(lapDiff, '0', true)+'L';\r\n} else {\t\r\n\tlet gap = $prop('PersistantTrackerPlugin.DriverAhead_'+pPos+'_Gap');\r\n\tif (gap > 60) {\r\n\t\treturn Math.round(gap/60)+'\\'';\r\n\t}\r\n\tret += format(gap, '00.00', true);\r\n}\r\n\r\nreturn ret;*/"
                         },
                         "Mode": 2,
                         "TargetPropertyName": "Text"
@@ -1929,7 +1929,7 @@
                         "Formula": {
                           "$id": "158",
                           "Interpreter": 1,
-                          "Expression": "// Shows lap if different from player's current lap,\r\n// or gap to learder.\r\n\r\nlet pLap = getLeaderLap();\r\n\r\nlet lap = $prop('DataCorePlugin.GameRawData.Graphics.CompletedLaps');\r\nlet lapDiff = pLap - lap;\r\nlet ret = '';\r\n\r\nif (lapDiff != 0) {\r\n\tret += format(lapDiff, '0', true)+'L';\r\n} else {\t\r\n\tlet gap =  drivergaptoleader( $prop('DataCorePlugin.GameData.Position') );\r\n\tif (gap > 60) {\r\n\t\treturn Math.round(gap/60)+'\\'';\r\n\t}\r\n\tret += format(gap, '00.00', true);\r\n}\r\n\r\nif (ret == '') { return '+00.00'; } \r\n\r\nreturn ret;"
+                          "Expression": "// Shows lap if different from player's current lap,\r\n// or gap to learder.\r\n\r\nlet pLap = getLeaderLap();\r\n\r\nlet lap = $prop('DataCorePlugin.GameRawData.Graphics.CompletedLaps');\r\nlet lapDiff = pLap - lap;\r\nlet ret = '';\r\n\r\nif (lapDiff > 1 || lapDiff < 1 && lapDiff != 0) {\r\n\tret += format(lapDiff, '0', true)+'L';\r\n} else {\t\r\n\tlet gap =  drivergaptoleader( $prop('DataCorePlugin.GameData.Position') );\r\n\tif (Math.abs(gap) > 60) {\r\n\t\treturn Math.round(gap/60)+'\\'';\r\n\t}\r\n\tret += format(gap, '00.00', true);\r\n}\r\n\r\nif (ret == '') { return '+00.00'; } \r\n\r\nreturn ret;"
                         },
                         "Mode": 2,
                         "TargetPropertyName": "Text"
@@ -1942,10 +1942,10 @@
                           "Expression": "// Shows lap if different from player's current lap,\r\n// or gap to learder.\r\n\r\nlet pPos = format(repeatindex()-1,'00');\r\nlet pLap = drivercurrentlap(1);\r\n\r\nlet lap = $prop('PersistantTrackerPlugin.DriverBehind_'+pPos+'_CurrentLap');\r\nreturn pLap - lap;"
                         },
                         "StartColor": "#FF000000",
-                        "EnableMiddleColor": false,
-                        "MiddleColor": "#FF000000",
+                        "EnableMiddleColor": true,
+                        "MiddleColor": "#FF000080",
                         "MiddleColorValue": 1.0,
-                        "EndColor": "#FF000080",
+                        "EndColor": "#FFB22222",
                         "StartColorValue": 0.0,
                         "EndColorValue": 3.0,
                         "Mode": 4,
@@ -2004,7 +2004,7 @@
                 }
               },
               "RenderingSkip": 0,
-              "ShowSelection": true,
+              "ShowSelection": false,
               "CanResize": false,
               "Childrens": {
                 "$id": "165",
@@ -2415,9 +2415,9 @@
                     "BorderTop": 0,
                     "Id": "8bfdd2a3-e554-4c36-b943-a794aea80a64",
                     "IsFreezed": false,
-                    "IsSelected": false,
+                    "IsSelected": true,
                     "Name": "leaderGap",
-                    "RenderingSkip": 70,
+                    "RenderingSkip": 180,
                     "Sid": 0,
                     "Bindings": {
                       "$id": "199",
@@ -2427,7 +2427,7 @@
                         "Formula": {
                           "$id": "201",
                           "Interpreter": 1,
-                          "Expression": "// Shows lap if different from player's current lap,\r\n// or gap to learder.\r\n\r\nlet pPos = format(repeatindex()-1,'00');\r\nif ($prop('PersistantTrackerPlugin.DriverBehind_'+pPos+'_Name') == null) return '';\r\n\r\nlet pLap = getLeaderLap();\r\nlet lap = $prop('PersistantTrackerPlugin.DriverBehind_'+pPos+'_CurrentLap');\r\nlet lapDiff = pLap - lap;\r\nlet ret = '';\r\n\r\nif (lapDiff != 0) {\r\n\tret += format(lapDiff, '0', true)+'L';\r\n} else {\t\r\n\tlet gap = drivergaptoleader($prop('PersistantTrackerPlugin.DriverBehind_'+pPos+'_Position'));\r\n\tif (gap > 60) {\r\n\t\treturn Math.round(gap/60)+'\\'';\r\n\t}\r\n\tret += format(gap, '00.0', true);\r\n}\r\n\r\nif (ret == '') { return '+00.00'; } \r\n\r\nreturn ret;"
+                          "Expression": "// Shows lap if different from player's current lap,\r\n// or gap to learder.\r\n\r\nlet pPos = format(repeatindex()-1,'00');\r\nif ($prop('PersistantTrackerPlugin.DriverBehind_'+pPos+'_Name') == null) return '';\r\n\r\nlet pLap = getLeaderLap();\r\nlet lap = $prop('PersistantTrackerPlugin.DriverBehind_'+pPos+'_CurrentLap');\r\nlet lapDiff = pLap - lap;\r\nlet ret = '';\r\n\r\nif (lapDiff > 1 || lapDiff < 1 && lapDiff != 0) {\r\n\tret += format(lapDiff, '0', true)+'L';\r\n} else {\t\r\n\tlet gap = drivergaptoleader($prop('PersistantTrackerPlugin.DriverBehind_'+pPos+'_Position'));\r\n\tif (Math.abs(gap) > 60) {\r\n\t\treturn Math.round(gap/60)+'\\'';\r\n\t}\r\n\tret += format(gap, '00.0', true);\r\n}\r\n\r\nif (ret == '') { return '+00.00'; } \r\n\r\nreturn ret;"
                         },
                         "Mode": 2,
                         "TargetPropertyName": "Text"
@@ -2437,11 +2437,11 @@
                         "Formula": {
                           "$id": "203",
                           "Interpreter": 1,
-                          "Expression": "// Shows lap if different from player's current lap,\r\n// or gap to learder.\r\n\r\nlet pPos = format(repeatindex()-1,'00');\r\nlet pLap = drivercurrentlap(1);\r\n\r\nlet lap = $prop('PersistantTrackerPlugin.DriverBehind_'+pPos+'_CurrentLap');\r\nreturn pLap - lap;"
+                          "Expression": "\r\nlet pPos = format(repeatindex()-1,'00');\r\n\r\nlet lap = $prop('PersistantTrackerPlugin.DriverBehind_'+pPos+'_CurrentLap');\r\nlet playerLap = $prop('DataCorePlugin.GameRawData.Graphics.CompletedLaps');\r\nlet playerDiff = playerLap - lap;\r\n\r\nif (playerDiff < 0) return 0;\r\nelse if (playerDiff > 0) return 3;\r\nreturn 1;"
                         },
-                        "StartColor": "#FFFFFFFF",
-                        "EnableMiddleColor": false,
-                        "MiddleColor": "#FF000000",
+                        "StartColor": "#FFFFA500",
+                        "EnableMiddleColor": true,
+                        "MiddleColor": "#FFFFFFFF",
                         "MiddleColorValue": 1.0,
                         "EndColor": "#FF5757FF",
                         "StartColorValue": 0.0,
@@ -2512,7 +2512,7 @@
                     "IsFreezed": false,
                     "IsSelected": false,
                     "Name": "playerGap",
-                    "RenderingSkip": 70,
+                    "RenderingSkip": 16,
                     "Sid": 0,
                     "Bindings": {
                       "$id": "207",
@@ -2522,7 +2522,7 @@
                         "Formula": {
                           "$id": "209",
                           "Interpreter": 1,
-                          "Expression": "// Shows lap if different from player's current lap,\r\n// or gap to learder.\r\n\r\nlet pPos = format(repeatindex()-1,'00');\r\nif ($prop('PersistantTrackerPlugin.DriverBehind_'+pPos+'_Name') == null) return '';\r\n\r\nlet pLap = $prop('DataCorePlugin.GameData.CompletedLaps');\r\nlet lap = $prop('PersistantTrackerPlugin.DriverBehind_'+pPos+'_CurrentLap');\r\nlet lapDiff = pLap - lap;\r\n\r\nlet ret = '';\r\n\r\nif (lapDiff != 0) {\r\n\tret += format(lapDiff, '0', true)+'L';\r\n} else {\t\r\n\tlet gap = $prop('PersistantTrackerPlugin.DriverBehind_'+pPos+'_Gap');\r\n\tif (gap > 60) {\r\n\t\treturn Math.round(gap/60)+'\\'';\r\n\t}\r\n\tret += format(gap, '00.00', true);\r\n}\r\n\r\nreturn ret;"
+                          "Expression": "// Shows lap if different from player's current lap,\r\n// or gap to learder.\r\n\r\nlet pPos = format(repeatindex()-1,'00');\r\nif ($prop('PersistantTrackerPlugin.DriverBehind_'+pPos+'_Name') == null) return '';\r\nlet gap = $prop('PersistantTrackerPlugin.DriverBehind_'+pPos+'_Gap');\r\nreturn format(gap, '00.00', true);\r\n\r\n/*\r\nlet pLap = $prop('DataCorePlugin.GameData.CompletedLaps');\r\nlet lap = $prop('PersistantTrackerPlugin.DriverBehind_'+pPos+'_CurrentLap');\r\nlet lapDiff = pLap - lap;\r\n\r\nlet ret = '';\r\n\r\nif (lapDiff != 0) {\r\n\tret += format(lapDiff, '0', true)+'L';\r\n} else {\t\r\n\tlet gap = $prop('PersistantTrackerPlugin.DriverBehind_'+pPos+'_Gap');\r\n\tif (gap > 60) {\r\n\t\treturn Math.round(gap/60)+'\\'';\r\n\t}\r\n\tret += format(gap, '00.00', true);\r\n}\r\n\r\nreturn ret;\r\n*/"
                         },
                         "Mode": 2,
                         "TargetPropertyName": "Text"
