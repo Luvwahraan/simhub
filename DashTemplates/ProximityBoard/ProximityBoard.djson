@@ -1,7 +1,7 @@
 {
   "$id": "1",
   "Version": 2,
-  "Id": "aad4b7db-42bc-40d5-a7fc-790ca7c2f09f",
+  "Id": "6c3ff2ad-b17f-4dfd-8bd8-d1be6f702520",
   "BaseHeight": 640,
   "BaseWidth": 360,
   "BackgroundColor": "#FF000000",
@@ -1113,7 +1113,7 @@
               "Repetitions": 3.0,
               "RepeatLeftOffset": 0.0,
               "RepeatTopOffset": -72.0,
-              "Height": 85.0,
+              "Height": 78.0,
               "Width": 357.0,
               "BackgroundColor": "#00FFFFFF",
               "BlurRadius": 0.0,
@@ -1134,7 +1134,7 @@
                 }
               },
               "RenderingSkip": 0,
-              "ShowSelection": true,
+              "ShowSelection": false,
               "CanResize": false,
               "Childrens": {
                 "$id": "91",
@@ -1309,16 +1309,16 @@
                     "FontWeight": "Normal",
                     "TextWrapping": 1,
                     "FontStyle": "Normal",
-                    "FontSize": 44.0,
-                    "Text": "#888",
+                    "FontSize": 42.0,
+                    "Text": "00:00.000",
                     "TextColor": "#FFFFFFFF",
                     "HorizontalAlignment": 0,
                     "VerticalAlignment": 1,
                     "UseMonospacedText": true,
-                    "CharWidth": 25.0,
+                    "CharWidth": 23.0,
                     "SpecialCharsWidth": 5.0,
                     "SpecialChars": ".,:;",
-                    "TextMask": "",
+                    "TextMask": "00:00.000",
                     "TextMaskColor": "#00FFFFFF",
                     "Rotation": 0.0,
                     "UseRotation": false,
@@ -1342,84 +1342,6 @@
                       }
                     },
                     "Height": 50.0,
-                    "Left": 4.0,
-                    "Opacity": 100.0,
-                    "Top": 239.0,
-                    "Visible": true,
-                    "BlinkDelay": 250.0,
-                    "BlinkEnabled": false,
-                    "Width": 102.0,
-                    "BorderBottom": 0,
-                    "BorderColor": "#FFFFFFFF",
-                    "BorderLeft": 0,
-                    "BorderRight": 0,
-                    "BorderTop": 0,
-                    "Id": "8bfdd2a3-e554-4c36-b943-a794aea80a64",
-                    "IsFreezed": false,
-                    "IsSelected": false,
-                    "Name": "carNeb",
-                    "RenderingSkip": 70,
-                    "Sid": 0,
-                    "Bindings": {
-                      "$id": "109",
-                      "Text": {
-                        "$id": "110",
-                        "FormatString": "",
-                        "Formula": {
-                          "$id": "111",
-                          "Interpreter": 1,
-                          "Expression": "let pPos = format(repeatindex()-1,'00');\r\nlet carNb = $prop('PersistantTrackerPlugin.DriverAhead_'+pPos+'_CarNumber');\r\nif (carNb == null) return '';\r\nreturn '#'+$prop('PersistantTrackerPlugin.DriverAhead_'+pPos+'_CarNumber');"
-                        },
-                        "Mode": 2,
-                        "TargetPropertyName": "Text"
-                      }
-                    }
-                  },
-                  {
-                    "$id": "112",
-                    "$type": "SimHub.Plugins.OutputPlugins.GraphicalDash.Models.TextItem, SimHub.Plugins",
-                    "IsTextItem": true,
-                    "ShadowDepth": 0,
-                    "ShadowBlur": 0,
-                    "ShadowDirection": 315,
-                    "ShadowColor": "#FF808080",
-                    "Font": "MySerene",
-                    "FontWeight": "Normal",
-                    "TextWrapping": 1,
-                    "FontStyle": "Normal",
-                    "FontSize": 42.0,
-                    "Text": "00:00.000",
-                    "TextColor": "#FFFFFFFF",
-                    "HorizontalAlignment": 0,
-                    "VerticalAlignment": 1,
-                    "UseMonospacedText": true,
-                    "CharWidth": 23.0,
-                    "SpecialCharsWidth": 5.0,
-                    "SpecialChars": ".,:;",
-                    "TextMask": "00:00.000",
-                    "TextMaskColor": "#00FFFFFF",
-                    "Rotation": 0.0,
-                    "UseRotation": false,
-                    "CanResize": true,
-                    "BackgroundColor": "#00FFFFFF",
-                    "BlurRadius": 0.0,
-                    "EnableBlur": false,
-                    "BorderStyle": {
-                      "$id": "113",
-                      "BorderColor": "#FFFFFFFF",
-                      "BorderTop": 0,
-                      "BorderBottom": 0,
-                      "BorderLeft": 0,
-                      "BorderRight": 0,
-                      "RadiusTopLeft": 0,
-                      "RadiusTopRight": 0,
-                      "RadiusBottomLeft": 0,
-                      "RadiusBottomRight": 0,
-                      "Bindings": {
-                        "$id": "114"
-                      }
-                    },
-                    "Height": 50.0,
                     "Left": 3.0,
                     "Opacity": 100.0,
                     "Top": 274.0,
@@ -1439,12 +1361,12 @@
                     "RenderingSkip": 70,
                     "Sid": 0,
                     "Bindings": {
-                      "$id": "115",
+                      "$id": "109",
                       "Text": {
-                        "$id": "116",
+                        "$id": "110",
                         "FormatString": "mm\\:ss\\.fff",
                         "Formula": {
-                          "$id": "117",
+                          "$id": "111",
                           "Interpreter": 1,
                           "Expression": "let pPos = format(repeatindex()-1,'00');\r\nif ($prop('PersistantTrackerPlugin.DriverAhead_'+pPos+'_Name') == null) return '';\r\nreturn $prop('PersistantTrackerPlugin.DriverAhead_'+pPos+'_LastLapTime');\r\n\r\n"
                         },
@@ -1452,9 +1374,9 @@
                         "TargetPropertyName": "Text"
                       },
                       "TextColor": {
-                        "$id": "118",
+                        "$id": "112",
                         "Formula": {
-                          "$id": "119",
+                          "$id": "113",
                           "Interpreter": 1,
                           "Expression": "// slower in dark grey\r\n// quicker in white\r\n// quick enough to pass in yellow\r\n//return $prop('DataCorePlugin.GameData.LastLapTime');\r\n\r\nlet pPos = format(repeatindex()-1,'00');\r\nlet t = timespantoseconds($prop('PersistantTrackerPlugin.DriverAhead_'+pPos+'_LastLapTime'));\r\nlet pTime = timespantoseconds($prop('DataCorePlugin.GameData.LastLapTime'));\r\n \r\nif (t == 0) return -1;\r\n\r\ndiff = pTime - t;\r\nif (diff <= 1.5) { return diff; }\r\n\r\nlet gap = $prop('PersistantTrackerPlugin.DriverAhead_'+pPos+'_Gap');\r\ngdiff = gap-diff;\r\n\r\nif (gdiff < 0) return 15;\r\n\r\nreturn diff;"
                         },
@@ -1471,7 +1393,7 @@
                     }
                   },
                   {
-                    "$id": "120",
+                    "$id": "114",
                     "$type": "SimHub.Plugins.OutputPlugins.GraphicalDash.Models.TextItem, SimHub.Plugins",
                     "IsTextItem": true,
                     "ShadowDepth": 0,
@@ -1500,7 +1422,7 @@
                     "BlurRadius": 0.0,
                     "EnableBlur": false,
                     "BorderStyle": {
-                      "$id": "121",
+                      "$id": "115",
                       "BorderColor": "#FFFFFFFF",
                       "BorderTop": 0,
                       "BorderBottom": 0,
@@ -1511,7 +1433,7 @@
                       "RadiusBottomLeft": 0,
                       "RadiusBottomRight": 0,
                       "Bindings": {
-                        "$id": "122"
+                        "$id": "116"
                       }
                     },
                     "Height": 50.0,
@@ -1534,12 +1456,12 @@
                     "RenderingSkip": 70,
                     "Sid": 0,
                     "Bindings": {
-                      "$id": "123",
+                      "$id": "117",
                       "Text": {
-                        "$id": "124",
+                        "$id": "118",
                         "FormatString": "",
                         "Formula": {
-                          "$id": "125",
+                          "$id": "119",
                           "Interpreter": 1,
                           "Expression": "// Shows lap if different from player's current lap,\r\n// or gap to learder.\r\n\r\nlet pPos = format(repeatindex()-1,'00');\r\nif ($prop('PersistantTrackerPlugin.DriverAhead_'+pPos+'_Name') == null) return '';\r\n\r\nlet pLap = getLeaderLap();\r\nlet lap = $prop('PersistantTrackerPlugin.DriverAhead_'+pPos+'_CurrentLap');\r\nlet lapDiff = pLap - lap;\r\nlet ret = '';\r\n\r\nif (lapDiff != 0) {\r\n\tret += format(lapDiff, '0', true)+'L';\r\n} else {\t\r\n\tlet gap = drivergaptoleader($prop('PersistantTrackerPlugin.DriverAhead_'+pPos+'_Position'));\r\n\tif (gap > 60) {\r\n\t\treturn Math.round(gap/60)+'\\'';\r\n\t}\r\n\tret += format(gap, '00.0', true);\r\n}\r\n\r\nif (ret == '') { return '+00.00'; } \r\n\r\nreturn ret;"
                         },
@@ -1547,9 +1469,9 @@
                         "TargetPropertyName": "Text"
                       },
                       "TextColor": {
-                        "$id": "126",
+                        "$id": "120",
                         "Formula": {
-                          "$id": "127",
+                          "$id": "121",
                           "Interpreter": 1,
                           "Expression": "// Shows lap if different from player's current lap,\r\n// or gap to learder.\r\n\r\nlet pPos = format(repeatindex()-1,'00');\r\nlet pLap = drivercurrentlap(1);\r\n\r\nlet lap = $prop('PersistantTrackerPlugin.DriverAhead_'+pPos+'_CurrentLap');\r\nreturn pLap - lap;"
                         },
@@ -1566,7 +1488,7 @@
                     }
                   },
                   {
-                    "$id": "128",
+                    "$id": "122",
                     "$type": "SimHub.Plugins.OutputPlugins.GraphicalDash.Models.TextItem, SimHub.Plugins",
                     "IsTextItem": true,
                     "ShadowDepth": 0,
@@ -1595,7 +1517,7 @@
                     "BlurRadius": 0.0,
                     "EnableBlur": false,
                     "BorderStyle": {
-                      "$id": "129",
+                      "$id": "123",
                       "BorderColor": "#FFFFFFFF",
                       "BorderTop": 0,
                       "BorderBottom": 0,
@@ -1606,7 +1528,7 @@
                       "RadiusBottomLeft": 0,
                       "RadiusBottomRight": 0,
                       "Bindings": {
-                        "$id": "130"
+                        "$id": "124"
                       }
                     },
                     "Height": 50.0,
@@ -1624,27 +1546,27 @@
                     "BorderTop": 0,
                     "Id": "8bfdd2a3-e554-4c36-b943-a794aea80a64",
                     "IsFreezed": false,
-                    "IsSelected": false,
+                    "IsSelected": true,
                     "Name": "playerGap",
                     "RenderingSkip": 70,
                     "Sid": 0,
                     "Bindings": {
-                      "$id": "131",
+                      "$id": "125",
                       "Text": {
-                        "$id": "132",
+                        "$id": "126",
                         "FormatString": "",
                         "Formula": {
-                          "$id": "133",
+                          "$id": "127",
                           "Interpreter": 1,
-                          "Expression": "// Shows lap if different from player's current lap,\r\n// or gap to learder.\r\n\r\nlet pPos = format(repeatindex()-1,'00');\r\nif ($prop('PersistantTrackerPlugin.DriverAhead_'+pPos+'_Name') == null) return '';\r\n\r\nlet pLap = $prop('DataCorePlugin.GameData.CompletedLaps');\r\nlet lap = $prop('PersistantTrackerPlugin.DriverAhead_'+pPos+'_CurrentLap');\r\nlet lapDiff = pLap - lap;\r\n\r\nlet ret = '';\r\n\r\nif (lapDiff != 0) {\r\n\tret += format(lapDiff, '0', true)+'L';\r\n} else {\t\r\n\tlet gap = $prop('PersistantTrackerPlugin.DriverAhead_'+pPos+'_Gap');\r\n\tif (gap > 60) {\r\n\t\treturn Math.round(gap/60)+'\\'';\r\n\t}\r\n\tret += format(gap, '00.00', true);\r\n}\r\n\r\nreturn ret;"
+                          "Expression": "// Shows lap if different from player's current lap,\r\n// or gap to learder.\r\n\r\nlet pPos = format(repeatindex()-1,'00');\r\nif ($prop('PersistantTrackerPlugin.DriverAhead_'+pPos+'_Name') == null) return '';\r\nreturn format(gap, '00.00', true);\r\n\r\n/*\r\nlet pLap = $prop('DataCorePlugin.GameData.CompletedLaps');\r\nlet lap = $prop('PersistantTrackerPlugin.DriverAhead_'+pPos+'_CurrentLap');\r\nlet lapDiff = pLap - lap;\r\n\r\nlet ret = '';\r\n\r\nif (lapDiff != 0) {\r\n\tret += format(lapDiff, '0', true)+'L';\r\n} else {\t\r\n\tlet gap = $prop('PersistantTrackerPlugin.DriverAhead_'+pPos+'_Gap');\r\n\tif (gap > 60) {\r\n\t\treturn Math.round(gap/60)+'\\'';\r\n\t}\r\n\tret += format(gap, '00.00', true);\r\n}\r\n\r\nreturn ret;*/"
                         },
                         "Mode": 2,
                         "TargetPropertyName": "Text"
                       },
                       "TextColor": {
-                        "$id": "134",
+                        "$id": "128",
                         "Formula": {
-                          "$id": "135",
+                          "$id": "129",
                           "Interpreter": 1,
                           "Expression": "// Shows lap if different from player's current lap,\r\n// or gap to learder.\r\n\r\nlet pPos = format(repeatindex()-1,'00');\r\nreturn Math.abs($prop('PersistantTrackerPlugin.DriverAhead_'+pPos+'_Gap'));"
                         },
@@ -1661,7 +1583,7 @@
                     }
                   },
                   {
-                    "$id": "136",
+                    "$id": "130",
                     "$type": "SimHub.Plugins.OutputPlugins.GraphicalDash.Models.TextItem, SimHub.Plugins",
                     "IsTextItem": true,
                     "ShadowDepth": 0,
@@ -1690,7 +1612,7 @@
                     "BlurRadius": 0.0,
                     "EnableBlur": false,
                     "BorderStyle": {
-                      "$id": "137",
+                      "$id": "131",
                       "BorderColor": "#FFFFFFFF",
                       "BorderTop": 0,
                       "BorderBottom": 0,
@@ -1701,7 +1623,7 @@
                       "RadiusBottomLeft": 0,
                       "RadiusBottomRight": 0,
                       "Bindings": {
-                        "$id": "138"
+                        "$id": "132"
                       }
                     },
                     "Height": 33.0,
@@ -1724,12 +1646,12 @@
                     "RenderingSkip": 70,
                     "Sid": 0,
                     "Bindings": {
-                      "$id": "139",
+                      "$id": "133",
                       "Text": {
-                        "$id": "140",
+                        "$id": "134",
                         "FormatString": "",
                         "Formula": {
-                          "$id": "141",
+                          "$id": "135",
                           "Interpreter": 1,
                           "Expression": "let pPos = format(repeatindex()-1,'00');\r\nlet carNb = $prop('PersistantTrackerPlugin.DriverAhead_'+pPos+'_CarNumber');\r\nif (carNb == null) return '';\r\nreturn '#'+carNb;"
                         },
@@ -1737,17 +1659,17 @@
                         "TargetPropertyName": "Text"
                       },
                       "BackgroundColor": {
-                        "$id": "142",
+                        "$id": "136",
                         "Formula": {
-                          "$id": "143",
+                          "$id": "137",
                           "Expression": "repeatindex()"
                         },
                         "StartColor": "#FF000000",
                         "EnableMiddleColor": false,
                         "MiddleColor": "#FF000000",
                         "MiddleColorValue": 1.0,
-                        "EndColor": "#FF00008B",
-                        "StartColorValue": 1.0,
+                        "EndColor": "#FF000080",
+                        "StartColorValue": 0.0,
                         "EndColorValue": 4.0,
                         "Mode": 4,
                         "TargetPropertyName": "BackgroundColor"
@@ -1761,7 +1683,7 @@
               "EnableBlur": false,
               "Left": 1.5,
               "Opacity": 100.0,
-              "Top": 239.0,
+              "Top": 246.0,
               "Visible": true,
               "BlinkDelay": 250.0,
               "BlinkEnabled": false,
@@ -1775,11 +1697,11 @@
               "Name": "PatternAhead",
               "Sid": 0,
               "Bindings": {
-                "$id": "144"
+                "$id": "138"
               }
             },
             {
-              "$id": "145",
+              "$id": "139",
               "$type": "SimHub.Plugins.OutputPlugins.GraphicalDash.Models.Layer, SimHub.Plugins",
               "Repetitions": 0.0,
               "RepeatLeftOffset": 0.0,
@@ -1790,7 +1712,7 @@
               "BlurRadius": 0.0,
               "Rotation": 0.0,
               "BorderStyle": {
-                "$id": "146",
+                "$id": "140",
                 "BorderColor": "#FFFFFFFF",
                 "BorderTop": 0,
                 "BorderBottom": 0,
@@ -1801,17 +1723,17 @@
                 "RadiusBottomLeft": 0,
                 "RadiusBottomRight": 0,
                 "Bindings": {
-                  "$id": "147"
+                  "$id": "141"
                 }
               },
               "RenderingSkip": 0,
               "ShowSelection": true,
               "CanResize": false,
               "Childrens": {
-                "$id": "148",
+                "$id": "142",
                 "$values": [
                   {
-                    "$id": "149",
+                    "$id": "143",
                     "$type": "SimHub.Plugins.OutputPlugins.GraphicalDash.Models.RectangleItem, SimHub.Plugins",
                     "IsRectangleItem": true,
                     "Rotation": 0.0,
@@ -1821,7 +1743,7 @@
                     "BlurRadius": 0.0,
                     "EnableBlur": false,
                     "BorderStyle": {
-                      "$id": "150",
+                      "$id": "144",
                       "BorderColor": "#FFFFFFFF",
                       "BorderTop": 0,
                       "BorderBottom": 0,
@@ -1832,7 +1754,7 @@
                       "RadiusBottomLeft": 10,
                       "RadiusBottomRight": 10,
                       "Bindings": {
-                        "$id": "151"
+                        "$id": "145"
                       }
                     },
                     "Height": 30.0,
@@ -1855,11 +1777,11 @@
                     "RenderingSkip": 150,
                     "Sid": 0,
                     "Bindings": {
-                      "$id": "152"
+                      "$id": "146"
                     }
                   },
                   {
-                    "$id": "153",
+                    "$id": "147",
                     "$type": "SimHub.Plugins.OutputPlugins.GraphicalDash.Models.TextItem, SimHub.Plugins",
                     "IsTextItem": true,
                     "ShadowDepth": 0,
@@ -1888,7 +1810,7 @@
                     "BlurRadius": 0.0,
                     "EnableBlur": false,
                     "BorderStyle": {
-                      "$id": "154",
+                      "$id": "148",
                       "BorderColor": "#FFFFFFFF",
                       "BorderTop": 0,
                       "BorderBottom": 0,
@@ -1899,7 +1821,7 @@
                       "RadiusBottomLeft": 0,
                       "RadiusBottomRight": 0,
                       "Bindings": {
-                        "$id": "155"
+                        "$id": "149"
                       }
                     },
                     "Height": 37.0,
@@ -1922,12 +1844,12 @@
                     "RenderingSkip": 150,
                     "Sid": 0,
                     "Bindings": {
-                      "$id": "156",
+                      "$id": "150",
                       "Text": {
-                        "$id": "157",
+                        "$id": "151",
                         "FormatString": "mm\\:ss\\.fff",
                         "Formula": {
-                          "$id": "158",
+                          "$id": "152",
                           "Interpreter": 1,
                           "Expression": "return $prop('DataCorePlugin.GameData.LastLapTime');"
                         },
@@ -1937,7 +1859,7 @@
                     }
                   },
                   {
-                    "$id": "159",
+                    "$id": "153",
                     "$type": "SimHub.Plugins.OutputPlugins.GraphicalDash.Models.TextItem, SimHub.Plugins",
                     "IsTextItem": true,
                     "ShadowDepth": 0,
@@ -1966,7 +1888,7 @@
                     "BlurRadius": 0.0,
                     "EnableBlur": false,
                     "BorderStyle": {
-                      "$id": "160",
+                      "$id": "154",
                       "BorderColor": "#FFFFFFFF",
                       "BorderTop": 0,
                       "BorderBottom": 0,
@@ -1977,7 +1899,7 @@
                       "RadiusBottomLeft": 0,
                       "RadiusBottomRight": 0,
                       "Bindings": {
-                        "$id": "161"
+                        "$id": "155"
                       }
                     },
                     "Height": 50.0,
@@ -2000,12 +1922,12 @@
                     "RenderingSkip": 70,
                     "Sid": 0,
                     "Bindings": {
-                      "$id": "162",
+                      "$id": "156",
                       "Text": {
-                        "$id": "163",
+                        "$id": "157",
                         "FormatString": "",
                         "Formula": {
-                          "$id": "164",
+                          "$id": "158",
                           "Interpreter": 1,
                           "Expression": "// Shows lap if different from player's current lap,\r\n// or gap to learder.\r\n\r\nlet pLap = getLeaderLap();\r\n\r\nlet lap = $prop('DataCorePlugin.GameRawData.Graphics.CompletedLaps');\r\nlet lapDiff = pLap - lap;\r\nlet ret = '';\r\n\r\nif (lapDiff != 0) {\r\n\tret += format(lapDiff, '0', true)+'L';\r\n} else {\t\r\n\tlet gap =  drivergaptoleader( $prop('DataCorePlugin.GameData.Position') );\r\n\tif (gap > 60) {\r\n\t\treturn Math.round(gap/60)+'\\'';\r\n\t}\r\n\tret += format(gap, '00.00', true);\r\n}\r\n\r\nif (ret == '') { return '+00.00'; } \r\n\r\nreturn ret;"
                         },
@@ -2013,9 +1935,9 @@
                         "TargetPropertyName": "Text"
                       },
                       "TextColor": {
-                        "$id": "165",
+                        "$id": "159",
                         "Formula": {
-                          "$id": "166",
+                          "$id": "160",
                           "Interpreter": 1,
                           "Expression": "// Shows lap if different from player's current lap,\r\n// or gap to learder.\r\n\r\nlet pPos = format(repeatindex()-1,'00');\r\nlet pLap = drivercurrentlap(1);\r\n\r\nlet lap = $prop('PersistantTrackerPlugin.DriverBehind_'+pPos+'_CurrentLap');\r\nreturn pLap - lap;"
                         },
@@ -2052,11 +1974,11 @@
               "Name": "Player",
               "Sid": 0,
               "Bindings": {
-                "$id": "167"
+                "$id": "161"
               }
             },
             {
-              "$id": "168",
+              "$id": "162",
               "$type": "SimHub.Plugins.OutputPlugins.GraphicalDash.Models.Layer, SimHub.Plugins",
               "Repetitions": 3.0,
               "RepeatLeftOffset": 0.0,
@@ -2067,7 +1989,7 @@
               "BlurRadius": 0.0,
               "Rotation": 0.0,
               "BorderStyle": {
-                "$id": "169",
+                "$id": "163",
                 "BorderColor": "#FFFFFFFF",
                 "BorderTop": 0,
                 "BorderBottom": 0,
@@ -2078,17 +2000,17 @@
                 "RadiusBottomLeft": 0,
                 "RadiusBottomRight": 0,
                 "Bindings": {
-                  "$id": "170"
+                  "$id": "164"
                 }
               },
               "RenderingSkip": 0,
-              "ShowSelection": false,
+              "ShowSelection": true,
               "CanResize": false,
               "Childrens": {
-                "$id": "171",
+                "$id": "165",
                 "$values": [
                   {
-                    "$id": "172",
+                    "$id": "166",
                     "$type": "SimHub.Plugins.OutputPlugins.GraphicalDash.Models.RectangleItem, SimHub.Plugins",
                     "IsRectangleItem": true,
                     "Rotation": 0.0,
@@ -2098,7 +2020,7 @@
                     "BlurRadius": 0.0,
                     "EnableBlur": false,
                     "BorderStyle": {
-                      "$id": "173",
+                      "$id": "167",
                       "BorderColor": "#FF6B8E23",
                       "BorderTop": 0,
                       "BorderBottom": 2,
@@ -2109,7 +2031,7 @@
                       "RadiusBottomLeft": 10,
                       "RadiusBottomRight": 10,
                       "Bindings": {
-                        "$id": "174"
+                        "$id": "168"
                       }
                     },
                     "Height": 71.0,
@@ -2132,11 +2054,11 @@
                     "RenderingSkip": 150,
                     "Sid": 0,
                     "Bindings": {
-                      "$id": "175",
+                      "$id": "169",
                       "BackgroundColor": {
-                        "$id": "176",
+                        "$id": "170",
                         "Formula": {
-                          "$id": "177",
+                          "$id": "171",
                           "Expression": "repeatindex()"
                         },
                         "StartColor": "#FFB22222",
@@ -2152,7 +2074,7 @@
                     }
                   },
                   {
-                    "$id": "178",
+                    "$id": "172",
                     "$type": "SimHub.Plugins.OutputPlugins.GraphicalDash.Models.TextItem, SimHub.Plugins",
                     "IsTextItem": true,
                     "ShadowDepth": 0,
@@ -2181,7 +2103,7 @@
                     "BlurRadius": 0.0,
                     "EnableBlur": false,
                     "BorderStyle": {
-                      "$id": "179",
+                      "$id": "173",
                       "BorderColor": "#FFFFFFFF",
                       "BorderTop": 0,
                       "BorderBottom": 0,
@@ -2192,7 +2114,7 @@
                       "RadiusBottomLeft": 0,
                       "RadiusBottomRight": 0,
                       "Bindings": {
-                        "$id": "180"
+                        "$id": "174"
                       }
                     },
                     "Height": 37.0,
@@ -2215,11 +2137,11 @@
                     "RenderingSkip": 70,
                     "Sid": 0,
                     "Bindings": {
-                      "$id": "181",
+                      "$id": "175",
                       "Text": {
-                        "$id": "182",
+                        "$id": "176",
                         "Formula": {
-                          "$id": "183",
+                          "$id": "177",
                           "Interpreter": 1,
                           "Expression": "let pPos = format(repeatindex()-1,'00');\r\nreturn contractName($prop('PersistantTrackerPlugin.DriverBehind_'+pPos+'_Name'));"
                         },
@@ -2227,9 +2149,9 @@
                         "TargetPropertyName": "Text"
                       },
                       "TextColor": {
-                        "$id": "184",
+                        "$id": "178",
                         "Formula": {
-                          "$id": "185",
+                          "$id": "179",
                           "Interpreter": 1,
                           "Expression": "let pPos = format(repeatindex()-1,'00');\r\nlet pLap = $prop('DataCorePlugin.GameData.CompletedLaps');\r\nlet lap = $prop('PersistantTrackerPlugin.DriverBehind_'+pPos+'_CurrentLap');\r\nlet lapDiff = pLap - lap;\r\n\r\nreturn lapDiff;\r\n"
                         },
@@ -2246,7 +2168,7 @@
                     }
                   },
                   {
-                    "$id": "186",
+                    "$id": "180",
                     "$type": "SimHub.Plugins.OutputPlugins.GraphicalDash.Models.TextItem, SimHub.Plugins",
                     "IsTextItem": true,
                     "ShadowDepth": 0,
@@ -2275,7 +2197,7 @@
                     "BlurRadius": 0.0,
                     "EnableBlur": false,
                     "BorderStyle": {
-                      "$id": "187",
+                      "$id": "181",
                       "BorderColor": "#FFFFFFFF",
                       "BorderTop": 0,
                       "BorderBottom": 0,
@@ -2286,7 +2208,7 @@
                       "RadiusBottomLeft": 0,
                       "RadiusBottomRight": 0,
                       "Bindings": {
-                        "$id": "188"
+                        "$id": "182"
                       }
                     },
                     "Height": 33.0,
@@ -2304,17 +2226,17 @@
                     "BorderTop": 0,
                     "Id": "8bfdd2a3-e554-4c36-b943-a794aea80a64",
                     "IsFreezed": false,
-                    "IsSelected": true,
+                    "IsSelected": false,
                     "Name": "carNb",
                     "RenderingSkip": 70,
                     "Sid": 0,
                     "Bindings": {
-                      "$id": "189",
+                      "$id": "183",
                       "Text": {
-                        "$id": "190",
+                        "$id": "184",
                         "FormatString": "",
                         "Formula": {
-                          "$id": "191",
+                          "$id": "185",
                           "Interpreter": 1,
                           "Expression": "let pPos = format(repeatindex()-1,'00');\r\nlet carNb = $prop('PersistantTrackerPlugin.DriverBehind_'+pPos+'_CarNumber');\r\nif (carNb == null) return '';\r\nreturn '#'+carNb;"
                         },
@@ -2322,9 +2244,9 @@
                         "TargetPropertyName": "Text"
                       },
                       "BackgroundColor": {
-                        "$id": "192",
+                        "$id": "186",
                         "Formula": {
-                          "$id": "193",
+                          "$id": "187",
                           "Expression": "repeatindex()"
                         },
                         "StartColor": "#FFB22222",
@@ -2340,7 +2262,7 @@
                     }
                   },
                   {
-                    "$id": "194",
+                    "$id": "188",
                     "$type": "SimHub.Plugins.OutputPlugins.GraphicalDash.Models.TextItem, SimHub.Plugins",
                     "IsTextItem": true,
                     "ShadowDepth": 0,
@@ -2369,7 +2291,7 @@
                     "BlurRadius": 0.0,
                     "EnableBlur": false,
                     "BorderStyle": {
-                      "$id": "195",
+                      "$id": "189",
                       "BorderColor": "#FFFFFFFF",
                       "BorderTop": 0,
                       "BorderBottom": 0,
@@ -2380,7 +2302,7 @@
                       "RadiusBottomLeft": 0,
                       "RadiusBottomRight": 0,
                       "Bindings": {
-                        "$id": "196"
+                        "$id": "190"
                       }
                     },
                     "Height": 50.0,
@@ -2403,12 +2325,12 @@
                     "RenderingSkip": 70,
                     "Sid": 0,
                     "Bindings": {
-                      "$id": "197",
+                      "$id": "191",
                       "Text": {
-                        "$id": "198",
+                        "$id": "192",
                         "FormatString": "mm\\:ss\\.fff",
                         "Formula": {
-                          "$id": "199",
+                          "$id": "193",
                           "Interpreter": 1,
                           "Expression": "let pPos = format(repeatindex()-1,'00');\r\nif ($prop('PersistantTrackerPlugin.DriverBehind_'+pPos+'_Name') == null) return '';\r\nreturn $prop('PersistantTrackerPlugin.DriverBehind_'+pPos+'_LastLapTime');\r\n\r\n"
                         },
@@ -2416,9 +2338,9 @@
                         "TargetPropertyName": "Text"
                       },
                       "TextColor": {
-                        "$id": "200",
+                        "$id": "194",
                         "Formula": {
-                          "$id": "201",
+                          "$id": "195",
                           "Interpreter": 1,
                           "Expression": "// slower in dark grey\r\n// quicker in white\r\n// quick enough to pass in yellow\r\n//return $prop('DataCorePlugin.GameData.LastLapTime');\r\n\r\nlet pPos = format(repeatindex()-1,'00');\r\nlet t = timespantoseconds($prop('PersistantTrackerPlugin.DriverBehind_'+pPos+'_LastLapTime'));\r\nlet pTime = timespantoseconds($prop('DataCorePlugin.GameData.LastLapTime'));\r\n \r\nif (t == 0) return -1;\r\n\r\ndiff = pTime - t;\r\nif (diff <= 1.5) { return diff; }\r\n\r\nlet gap = $prop('PersistantTrackerPlugin.DriverBehind_'+pPos+'_Gap');\r\ngdiff = gap-diff;\r\n\r\nif (gdiff < 0) return 15;\r\n\r\nreturn diff;"
                         },
@@ -2435,7 +2357,7 @@
                     }
                   },
                   {
-                    "$id": "202",
+                    "$id": "196",
                     "$type": "SimHub.Plugins.OutputPlugins.GraphicalDash.Models.TextItem, SimHub.Plugins",
                     "IsTextItem": true,
                     "ShadowDepth": 0,
@@ -2464,7 +2386,7 @@
                     "BlurRadius": 0.0,
                     "EnableBlur": false,
                     "BorderStyle": {
-                      "$id": "203",
+                      "$id": "197",
                       "BorderColor": "#FFFFFFFF",
                       "BorderTop": 0,
                       "BorderBottom": 0,
@@ -2475,7 +2397,7 @@
                       "RadiusBottomLeft": 0,
                       "RadiusBottomRight": 0,
                       "Bindings": {
-                        "$id": "204"
+                        "$id": "198"
                       }
                     },
                     "Height": 50.0,
@@ -2498,12 +2420,12 @@
                     "RenderingSkip": 70,
                     "Sid": 0,
                     "Bindings": {
-                      "$id": "205",
+                      "$id": "199",
                       "Text": {
-                        "$id": "206",
+                        "$id": "200",
                         "FormatString": "",
                         "Formula": {
-                          "$id": "207",
+                          "$id": "201",
                           "Interpreter": 1,
                           "Expression": "// Shows lap if different from player's current lap,\r\n// or gap to learder.\r\n\r\nlet pPos = format(repeatindex()-1,'00');\r\nif ($prop('PersistantTrackerPlugin.DriverBehind_'+pPos+'_Name') == null) return '';\r\n\r\nlet pLap = getLeaderLap();\r\nlet lap = $prop('PersistantTrackerPlugin.DriverBehind_'+pPos+'_CurrentLap');\r\nlet lapDiff = pLap - lap;\r\nlet ret = '';\r\n\r\nif (lapDiff != 0) {\r\n\tret += format(lapDiff, '0', true)+'L';\r\n} else {\t\r\n\tlet gap = drivergaptoleader($prop('PersistantTrackerPlugin.DriverBehind_'+pPos+'_Position'));\r\n\tif (gap > 60) {\r\n\t\treturn Math.round(gap/60)+'\\'';\r\n\t}\r\n\tret += format(gap, '00.0', true);\r\n}\r\n\r\nif (ret == '') { return '+00.00'; } \r\n\r\nreturn ret;"
                         },
@@ -2511,9 +2433,9 @@
                         "TargetPropertyName": "Text"
                       },
                       "TextColor": {
-                        "$id": "208",
+                        "$id": "202",
                         "Formula": {
-                          "$id": "209",
+                          "$id": "203",
                           "Interpreter": 1,
                           "Expression": "// Shows lap if different from player's current lap,\r\n// or gap to learder.\r\n\r\nlet pPos = format(repeatindex()-1,'00');\r\nlet pLap = drivercurrentlap(1);\r\n\r\nlet lap = $prop('PersistantTrackerPlugin.DriverBehind_'+pPos+'_CurrentLap');\r\nreturn pLap - lap;"
                         },
@@ -2530,7 +2452,7 @@
                     }
                   },
                   {
-                    "$id": "210",
+                    "$id": "204",
                     "$type": "SimHub.Plugins.OutputPlugins.GraphicalDash.Models.TextItem, SimHub.Plugins",
                     "IsTextItem": true,
                     "ShadowDepth": 0,
@@ -2559,7 +2481,7 @@
                     "BlurRadius": 0.0,
                     "EnableBlur": false,
                     "BorderStyle": {
-                      "$id": "211",
+                      "$id": "205",
                       "BorderColor": "#FFFFFFFF",
                       "BorderTop": 0,
                       "BorderBottom": 0,
@@ -2570,7 +2492,7 @@
                       "RadiusBottomLeft": 0,
                       "RadiusBottomRight": 0,
                       "Bindings": {
-                        "$id": "212"
+                        "$id": "206"
                       }
                     },
                     "Height": 50.0,
@@ -2593,12 +2515,12 @@
                     "RenderingSkip": 70,
                     "Sid": 0,
                     "Bindings": {
-                      "$id": "213",
+                      "$id": "207",
                       "Text": {
-                        "$id": "214",
+                        "$id": "208",
                         "FormatString": "",
                         "Formula": {
-                          "$id": "215",
+                          "$id": "209",
                           "Interpreter": 1,
                           "Expression": "// Shows lap if different from player's current lap,\r\n// or gap to learder.\r\n\r\nlet pPos = format(repeatindex()-1,'00');\r\nif ($prop('PersistantTrackerPlugin.DriverBehind_'+pPos+'_Name') == null) return '';\r\n\r\nlet pLap = $prop('DataCorePlugin.GameData.CompletedLaps');\r\nlet lap = $prop('PersistantTrackerPlugin.DriverBehind_'+pPos+'_CurrentLap');\r\nlet lapDiff = pLap - lap;\r\n\r\nlet ret = '';\r\n\r\nif (lapDiff != 0) {\r\n\tret += format(lapDiff, '0', true)+'L';\r\n} else {\t\r\n\tlet gap = $prop('PersistantTrackerPlugin.DriverBehind_'+pPos+'_Gap');\r\n\tif (gap > 60) {\r\n\t\treturn Math.round(gap/60)+'\\'';\r\n\t}\r\n\tret += format(gap, '00.00', true);\r\n}\r\n\r\nreturn ret;"
                         },
@@ -2606,9 +2528,9 @@
                         "TargetPropertyName": "Text"
                       },
                       "TextColor": {
-                        "$id": "216",
+                        "$id": "210",
                         "Formula": {
-                          "$id": "217",
+                          "$id": "211",
                           "Interpreter": 1,
                           "Expression": "// Shows lap if different from player's current lap,\r\n// or gap to learder.\r\n\r\nlet pPos = format(repeatindex()-1,'00');\r\nreturn $prop('PersistantTrackerPlugin.DriverBehind_'+pPos+'_Gap');"
                         },
@@ -2645,7 +2567,7 @@
               "Name": "Pattern Behind",
               "Sid": 0,
               "Bindings": {
-                "$id": "218"
+                "$id": "212"
               }
             }
           ]
@@ -2654,7 +2576,7 @@
         "Name": "main",
         "Sid": 0,
         "Bindings": {
-          "$id": "219"
+          "$id": "213"
         }
       }
     ]
@@ -2667,23 +2589,23 @@
     "$ref": "3"
   },
   "Images": {
-    "$id": "220",
+    "$id": "214",
     "$values": []
   },
   "Metadata": {
-    "$id": "221",
+    "$id": "215",
     "Category": "Mobile",
     "Description": "Times and gap about car ahead/behind.",
     "Author": "Luvwahraan",
     "ScreenCount": 1.0,
     "InGameScreensIndexs": {
-      "$id": "222",
+      "$id": "216",
       "$values": [
         0
       ]
     },
     "IdleScreensIndexs": {
-      "$id": "223",
+      "$id": "217",
       "$values": []
     },
     "MainPreviewIndex": 0,
@@ -2695,7 +2617,7 @@
     "MetadataVersion": 2.0,
     "EnableOnDashboardMessaging": true,
     "PitScreensIndexs": {
-      "$id": "224",
+      "$id": "218",
       "$values": []
     }
   },
