@@ -1,0 +1,344 @@
+{
+  "$id": "1",
+  "Version": 2,
+  "Id": "5c7a1315-315c-4747-bc12-93fe5ffae683",
+  "BaseHeight": 258,
+  "BaseWidth": 10,
+  "BackgroundColor": "#FF000000",
+  "Screens": {
+    "$id": "2",
+    "$values": [
+      {
+        "$id": "3",
+        "RenderingSkip": 0,
+        "IsFreezed": false,
+        "InGameScreen": true,
+        "IdleScreen": false,
+        "PitScreen": false,
+        "ScreenScript": {
+          "$id": "4",
+          "Interpreter": 1
+        },
+        "BackgroundColor": "#FF000000",
+        "IsSelected": true,
+        "Items": {
+          "$id": "5",
+          "$values": [
+            {
+              "$id": "6",
+              "$type": "SimHub.Plugins.OutputPlugins.GraphicalDash.Models.Layer, SimHub.Plugins",
+              "Repetitions": 10.0,
+              "RepeatLeftOffset": 0.0,
+              "RepeatTopOffset": 25.56,
+              "Height": 1.0,
+              "Width": 6.0,
+              "BackgroundColor": "#00FFFFFF",
+              "BlurRadius": 0.0,
+              "Rotation": 0.0,
+              "BorderStyle": {
+                "$id": "7",
+                "BorderColor": "#FFFFFFFF",
+                "BorderTop": 0,
+                "BorderBottom": 0,
+                "BorderLeft": 0,
+                "BorderRight": 0,
+                "RadiusTopLeft": 0,
+                "RadiusTopRight": 0,
+                "RadiusBottomLeft": 0,
+                "RadiusBottomRight": 0,
+                "Bindings": {
+                  "$id": "8"
+                }
+              },
+              "RenderingSkip": 0,
+              "ShowSelection": false,
+              "CanResize": false,
+              "Childrens": {
+                "$id": "9",
+                "$values": [
+                  {
+                    "$id": "10",
+                    "$type": "SimHub.Plugins.OutputPlugins.GraphicalDash.Models.RectangleItem, SimHub.Plugins",
+                    "IsRectangleItem": true,
+                    "Rotation": 0.0,
+                    "UseRotation": false,
+                    "CanResize": true,
+                    "BackgroundColor": "#FFFFFFFF",
+                    "BlurRadius": 0.0,
+                    "EnableBlur": false,
+                    "BorderStyle": {
+                      "$id": "11",
+                      "BorderColor": "#FFFFFFFF",
+                      "BorderTop": 0,
+                      "BorderBottom": 0,
+                      "BorderLeft": 0,
+                      "BorderRight": 0,
+                      "RadiusTopLeft": 0,
+                      "RadiusTopRight": 0,
+                      "RadiusBottomLeft": 0,
+                      "RadiusBottomRight": 0,
+                      "Bindings": {
+                        "$id": "12"
+                      }
+                    },
+                    "Height": 1.0,
+                    "Left": 3.0,
+                    "Opacity": 100.0,
+                    "Top": 0.5,
+                    "Visible": true,
+                    "BlinkDelay": 250.0,
+                    "BlinkEnabled": false,
+                    "Width": 6.0,
+                    "BorderBottom": 0,
+                    "BorderColor": "#FFFFFFFF",
+                    "BorderLeft": 0,
+                    "BorderRight": 0,
+                    "BorderTop": 0,
+                    "Id": "b724aaf0-250a-430e-bc0d-f03d44134fc7",
+                    "IsFreezed": false,
+                    "IsSelected": true,
+                    "Name": "g0",
+                    "RenderingSkip": 0,
+                    "Sid": 0,
+                    "Bindings": {
+                      "$id": "13",
+                      "BackgroundColor": {
+                        "$id": "14",
+                        "Formula": {
+                          "$id": "15",
+                          "Interpreter": 1,
+                          "Expression": "return getForegroundColor();"
+                        },
+                        "Mode": 2,
+                        "TargetPropertyName": "BackgroundColor"
+                      }
+                    }
+                  }
+                ]
+              },
+              "Group": false,
+              "UseRotation": false,
+              "EnableBlur": false,
+              "Left": 1.0,
+              "Opacity": 100.0,
+              "Top": 0.5,
+              "Visible": true,
+              "BlinkDelay": 250.0,
+              "BlinkEnabled": false,
+              "BorderBottom": 0,
+              "BorderColor": "#FFFFFFFF",
+              "BorderLeft": 0,
+              "BorderRight": 0,
+              "BorderTop": 0,
+              "Id": "c144094a-bb37-4738-ae59-3d240ba4fbde",
+              "IsSelected": false,
+              "Name": "grads",
+              "Sid": 0,
+              "Bindings": {
+                "$id": "16"
+              }
+            },
+            {
+              "$id": "17",
+              "$type": "SimHub.Plugins.OutputPlugins.GraphicalDash.Models.VerticalLinearGaugeItem, SimHub.Plugins",
+              "GaugeAlignment": 2,
+              "AutoSize": false,
+              "AutoSizeScale": 1.0,
+              "GaugeColor": "#FFFF0000",
+              "Minimum": 0.0,
+              "Maximum": 100.0,
+              "Value": 20.0,
+              "Steps": 0.0,
+              "PAW": 26.0,
+              "Rotation": 0.0,
+              "UseRotation": false,
+              "CanResize": true,
+              "BackgroundColor": "#00FFFFFF",
+              "BlurRadius": 0.0,
+              "EnableBlur": false,
+              "BorderStyle": {
+                "$id": "18",
+                "BorderColor": "#FFFFFFFF",
+                "BorderTop": 0,
+                "BorderBottom": 2,
+                "BorderLeft": 0,
+                "BorderRight": 2,
+                "RadiusTopLeft": 0,
+                "RadiusTopRight": 0,
+                "RadiusBottomLeft": 0,
+                "RadiusBottomRight": 0,
+                "Bindings": {
+                  "$id": "19"
+                }
+              },
+              "Height": 130.0,
+              "Left": 0.0,
+              "Opacity": 100.0,
+              "Top": 0.0,
+              "Visible": true,
+              "BlinkDelay": 250.0,
+              "BlinkEnabled": false,
+              "Width": 10.0,
+              "BorderBottom": 2,
+              "BorderColor": "#FFFFFFFF",
+              "BorderLeft": 0,
+              "BorderRight": 2,
+              "BorderTop": 0,
+              "Id": "964adb62-7f56-46cc-bd59-7c2df2dc6423",
+              "IsFreezed": false,
+              "IsSelected": false,
+              "Name": "brakeGauge",
+              "RenderingSkip": 11,
+              "Sid": 0,
+              "Bindings": {
+                "$id": "20",
+                "GaugeColor": {
+                  "$id": "21",
+                  "Formula": {
+                    "$id": "22",
+                    "Interpreter": 1,
+                    "Expression": "return getForegroundColor('frame');"
+                  },
+                  "Mode": 2,
+                  "TargetPropertyName": "GaugeColor"
+                },
+                "Value": {
+                  "$id": "23",
+                  "Formula": {
+                    "$id": "24",
+                    "Expression": "[Brake]"
+                  },
+                  "Mode": 2,
+                  "TargetPropertyName": "Value"
+                }
+              }
+            },
+            {
+              "$id": "25",
+              "$type": "SimHub.Plugins.OutputPlugins.GraphicalDash.Models.VerticalLinearGaugeItem, SimHub.Plugins",
+              "GaugeAlignment": 2,
+              "AutoSize": false,
+              "AutoSizeScale": 1.0,
+              "GaugeColor": "#FFFF0000",
+              "Minimum": 0.0,
+              "Maximum": 100.0,
+              "Value": 5.0,
+              "Steps": 0.0,
+              "PAW": 6.0,
+              "Rotation": 180.0,
+              "UseRotation": true,
+              "CanResize": true,
+              "BackgroundColor": "#00FFFFFF",
+              "BlurRadius": 0.0,
+              "EnableBlur": false,
+              "BorderStyle": {
+                "$id": "26",
+                "BorderColor": "#FFFFFFFF",
+                "BorderTop": 0,
+                "BorderBottom": 2,
+                "BorderLeft": 2,
+                "BorderRight": 0,
+                "RadiusTopLeft": 0,
+                "RadiusTopRight": 0,
+                "RadiusBottomLeft": 0,
+                "RadiusBottomRight": 0,
+                "Bindings": {
+                  "$id": "27"
+                }
+              },
+              "Height": 130.0,
+              "Left": 0.0,
+              "Opacity": 100.0,
+              "Top": 128.0,
+              "Visible": true,
+              "BlinkDelay": 250.0,
+              "BlinkEnabled": false,
+              "Width": 10.0,
+              "BorderBottom": 2,
+              "BorderColor": "#FFFFFFFF",
+              "BorderLeft": 2,
+              "BorderRight": 0,
+              "BorderTop": 0,
+              "Id": "964adb62-7f56-46cc-bd59-7c2df2dc6423",
+              "IsFreezed": false,
+              "IsSelected": false,
+              "Name": "throttleGauge",
+              "RenderingSkip": 11,
+              "Sid": 0,
+              "Bindings": {
+                "$id": "28",
+                "GaugeColor": {
+                  "$id": "29",
+                  "Formula": {
+                    "$id": "30",
+                    "Interpreter": 1,
+                    "Expression": "return getForegroundColor('frame');"
+                  },
+                  "Mode": 2,
+                  "TargetPropertyName": "GaugeColor"
+                },
+                "Value": {
+                  "$id": "31",
+                  "Formula": {
+                    "$id": "32",
+                    "Expression": "[Throttle]"
+                  },
+                  "Mode": 2,
+                  "TargetPropertyName": "Value"
+                }
+              }
+            }
+          ]
+        },
+        "Id": "856b2258-051e-4d27-8bf7-f3ab327218bc",
+        "Name": "Screen1",
+        "Sid": 0,
+        "Bindings": {
+          "$id": "33"
+        }
+      }
+    ]
+  },
+  "SnapToGrid": false,
+  "HideLabels": true,
+  "ShowBoundingRectangles": false,
+  "GridSize": 10,
+  "SelectedScreen": {
+    "$ref": "3"
+  },
+  "Images": {
+    "$id": "34",
+    "$values": []
+  },
+  "Metadata": {
+    "$id": "35",
+    "ScreenCount": 1.0,
+    "InGameScreensIndexs": {
+      "$id": "36",
+      "$values": [
+        0
+      ]
+    },
+    "IdleScreensIndexs": {
+      "$id": "37",
+      "$values": []
+    },
+    "MainPreviewIndex": 0,
+    "IsOverlay": false,
+    "ShowInTaskBar": true,
+    "Width": 10.0,
+    "Height": 258.0,
+    "OverlaySizeWarning": false,
+    "MetadataVersion": 2.0,
+    "EnableOnDashboardMessaging": true,
+    "PitScreensIndexs": {
+      "$id": "38",
+      "$values": []
+    }
+  },
+  "ShowOnScreenControls": true,
+  "ShowInTaskBar": true,
+  "IsOverlay": false,
+  "EnableClickThroughOverlay": true,
+  "EnableOnDashboardMessaging": true
+}
