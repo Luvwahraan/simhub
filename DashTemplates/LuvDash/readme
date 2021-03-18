@@ -1,0 +1,48 @@
+RPM Widget:
+  Gear has up and down arrows.
+    Colors defined in colors.js
+  There is a gearup text who appears at middle when necessary.
+  Gauge is 3 separated gauge with differents renderingSkip values:
+    bgGauge with long refresh, shows max rpm in grey when rpm slow down
+    exactGauge and shows same rpm level, with different offset
+    
+Fuel:
+  Fuel level in liters; red if going to be low.
+  Driving time with left fuel.
+Lap:
+  Fuel consumptions per lap and last lap.
+Level:
+  Fuel level, based on start fill and updated at filling.
+  Fuel level, based on max car fill.
+Done:
+  Finished laps and burned fuel.
+Map:
+  replaced with large radar when a car is near, who is resized to little radar when necessary.
+ABS, BIAS, TC, MAP, TCC and POS become temporary red when changed.
+
+Left:
+  Session end time.
+  Sessions remaining laps.
+Next:
+  estimated current lap time
+Fwd:
+  Ahead car infos:
+    gap: red if too far, green if near, else white
+    driver name
+    car number: white if same lap, orange if more laps and blue if player has more laps
+Back:
+  Begind car infos:
+    gap: red if really close, green if more than 2s, or white
+    driver name
+    car number: white if same lap, orange if more laps and blue if player has more laps
+Fwd & Back replaced with all and session best times, if there are no opponents.
+Pos:
+  player position on total cars in race
+Last frame isnt used yet.
+
+In the middle there are tires widgets.
+  This shows pressures with color, tires temperatures with color, brakes temps with color.
+  Brakes calipers width are proportionals to brake compounds duration, and reduced as wear
+  increase, same as disc duration
+
+    
