@@ -7,11 +7,17 @@ const defaultColor = {
 	'time': 				'#FFFFFFFF',
 	'bestTime':				'#FF32CD32',
     
-    'param':               '#FFFFFFFF',
-    'paramChanged':        '#FFFF0000',
+    'param':                '#FFFFFFFF',
+    'paramChanged':         '#FFFF0000',
 
 	'background': 			'#FF000000',
 	'foreground': 			'#FFFFFFFF',
+    
+    'clutch':               '#FF000000',
+    'throttle':             '#FFFFFFFF',
+    'tc':                   '#FF9ACD32',
+    'abs':                  '#FF9ACD32',
+    'brake':                '#FFFF0000',
     
     'penalty':              '#FFB22222', // firebrick
     

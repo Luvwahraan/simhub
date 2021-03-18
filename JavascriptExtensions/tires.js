@@ -184,7 +184,7 @@ function getTireColor(temp) {
 		return '#FF00008B'; //bleu sombre
 	} else if ( temp <= 30 ) { 				// 20 	<  temp <= 	30 	: bleu
 		return '#FF0000FF'; //bleu
-	} else if ( temp <= 75 ) { 				// 30 	<  temp <= 	75 	: cyan
+	} else if ( temp < 70 ) { 				// 30 	<  temp <= 	75 	: cyan
 		return '#FF00FFFF'; //cyan
 	} else if ( temp <= 80 ) { 				// 75 	<  temp <= 	80 	: green
 		return '#FF008000'; //green
@@ -192,11 +192,11 @@ function getTireColor(temp) {
 		return '#FF32CD32'; //lime green
 	} else if ( temp <= 88 ) { 				// 84 	<  temp <= 	88 	: lime
 		return '#FF7CFC00'; // lime
-	} else if ( temp < 90 ) { 				// 88 	<  temp < 	90 	: yellow
+	} else if ( temp < 95 ) { 				// 88 	<  temp < 	95 	: yellow
 		return '#FFFFFF00'; // yellow
-	} else if ( temp <= 98 ) { 				// 90 	<= temp <=	98 	: orange
+	} else if ( temp <= 100 ) { 			// 95 	<= temp <=	100	: orange
 		return '#FFFF8C00'; // orange
-	} else if ( temp > 98 ) { 				// 98	<  temp 		: red
+	} else if ( temp > 100 ) { 				// 100	<  temp 		: red
 		return '#FFFF0000'; // red
 	}
 	return '#00000000'; // black

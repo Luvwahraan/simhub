@@ -109,8 +109,6 @@ function getBrakeRealName(position, side) {
 
 function wGetBrakeColor(position, side) {
 	if (returnDummyColor()) { return defaultColor['dummycolor']; }
-    
-
 	position = tcase(position);
 	if (side == null) { side = ''; } else { side = tcase(side); }
 	return getBrakeColor( $prop('DataCorePlugin.GameData.NewData.BrakeTemperature'+position+side) );
@@ -128,7 +126,7 @@ function getBrakeColor(temp) {
 		return '#FF00008B'; // bleu sombre
 	} else if ( temp < 200 ) {
 		return '#FF0000FF'; // bleu
-	} else if ( temp < 600 ) {
+	} else if ( temp < 430 ) {
 		return '#FF00FFFF'; // cyan
 	} else if ( temp < 660 ) {
 		return '#FF008000'; // green
