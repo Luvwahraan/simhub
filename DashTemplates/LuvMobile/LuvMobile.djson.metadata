@@ -1,7 +1,7 @@
 {
-  "Category": "Honda",
-  "Title": null,
-  "Description": "NSX Dash with more informations",
+  "Category": "Luvwahraan",
+  "Title": "LuvMobileL",
+  "Description": "Luvwahraan’s left dash.",
   "Author": "Luvwahraan",
   "ScreenCount": 1.0,
   "InGameScreensIndexs": [
@@ -11,9 +11,9 @@
   "MainPreviewIndex": 0,
   "IsOverlay": false,
   "ShowInTaskBar": true,
-  "Width": 690.0,
-  "Height": 450.0,
-  "OverlaySizeWarning": false,
+  "Width": 540.0,
+  "Height": 960.0,
+  "OverlaySizeWarning": true,
   "MetadataVersion": 2.0,
   "EnableOnDashboardMessaging": true,
   "PitScreensIndexs": []

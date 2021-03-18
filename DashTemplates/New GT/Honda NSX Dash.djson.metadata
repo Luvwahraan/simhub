@@ -1,15 +1,17 @@
 {
   "Category": "Honda",
-  "Title": null,
+  "Title": "Honda NSX Evo",
   "Description": "NSX Dash with more informations",
   "Author": "Luvwahraan",
-  "ScreenCount": 1.0,
+  "ScreenCount": 3.0,
   "InGameScreensIndexs": [
-    0
+    0,
+    1,
+    2
   ],
   "IdleScreensIndexs": [],
   "MainPreviewIndex": 0,
-  "IsOverlay": false,
+  "IsOverlay": true,
   "ShowInTaskBar": true,
   "Width": 690.0,
   "Height": 450.0,

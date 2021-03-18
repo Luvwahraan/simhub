@@ -1,0 +1,256 @@
+{
+  "$id": "1",
+  "Version": 2,
+  "Id": "5c1c7946-eeb3-41b1-ae91-74b3eb43a619",
+  "BaseHeight": 20,
+  "BaseWidth": 170,
+  "BackgroundColor": "#FF000000",
+  "Screens": {
+    "$id": "2",
+    "$values": [
+      {
+        "$id": "3",
+        "RenderingSkip": 0,
+        "IsFreezed": false,
+        "InGameScreen": true,
+        "IdleScreen": false,
+        "PitScreen": false,
+        "ScreenScript": {
+          "$id": "4",
+          "Interpreter": 1
+        },
+        "BackgroundColor": "#FF000000",
+        "IsSelected": true,
+        "Items": {
+          "$id": "5",
+          "$values": [
+            {
+              "$id": "6",
+              "$type": "SimHub.Plugins.OutputPlugins.GraphicalDash.Models.TextItem, SimHub.Plugins",
+              "IsTextItem": true,
+              "ShadowDepth": 0,
+              "ShadowBlur": 0,
+              "ShadowDirection": 315,
+              "ShadowColor": "#FF808080",
+              "Font": "Segoe UI",
+              "FontWeight": "Normal",
+              "TextWrapping": 1,
+              "FontStyle": "Normal",
+              "FontSize": 12.0,
+              "Text": "Text",
+              "TextColor": "#FFFFFFFF",
+              "HorizontalAlignment": 0,
+              "VerticalAlignment": 2,
+              "UseMonospacedText": false,
+              "CharWidth": 40.0,
+              "SpecialCharsWidth": 20.0,
+              "SpecialChars": ".,:;",
+              "TextMask": "0000000000",
+              "TextMaskColor": "#FF808080",
+              "Rotation": 0.0,
+              "UseRotation": false,
+              "CanResize": true,
+              "BackgroundColor": "#00FFFFFF",
+              "BlurRadius": 0.0,
+              "EnableBlur": false,
+              "BorderStyle": {
+                "$id": "7",
+                "AllBorders": 0,
+                "AllCornerRadius": 0,
+                "BorderColor": "#FFFFFFFF",
+                "BorderTop": 0,
+                "BorderBottom": 0,
+                "BorderLeft": 0,
+                "BorderRight": 0,
+                "CornerRadius": "0,0,0,0",
+                "RadiusTopLeft": 0,
+                "RadiusTopRight": 0,
+                "RadiusBottomLeft": 0,
+                "RadiusBottomRight": 0,
+                "Bindings": {
+                  "$id": "8"
+                }
+              },
+              "Height": 20.0,
+              "Left": 0.0,
+              "Opacity": 100.0,
+              "Top": 0.0,
+              "Visible": true,
+              "BlinkDelay": 250.0,
+              "BlinkEnabled": false,
+              "Width": 80.0,
+              "BorderBottom": 0,
+              "BorderColor": "#FFFFFFFF",
+              "BorderLeft": 0,
+              "BorderRight": 0,
+              "BorderTop": 0,
+              "Id": "455fb4f8-f748-472b-91b6-cf802a7e8881",
+              "IsFreezed": false,
+              "IsSelected": true,
+              "Name": "JSTestText",
+              "RenderingSkip": 59,
+              "Sid": 0,
+              "Bindings": {
+                "$id": "9",
+                "Text": {
+                  "$id": "10",
+                  "Formula": {
+                    "$id": "11",
+                    "Interpreter": 1,
+                    "Expression": "return $prop('DataCorePlugin.GameData.NewData.BrakeTemperatureFrontLeft')"
+                  },
+                  "Mode": 2,
+                  "TargetPropertyName": "Text"
+                },
+                "TextColor": {
+                  "$id": "12",
+                  "Formula": {
+                    "$id": "13",
+                    "Expression": "[DataCorePlugin.GameData.NewData.BrakeTemperatureFrontLeft]"
+                  },
+                  "StartColor": "#FF00FFFF",
+                  "EnableMiddleColor": false,
+                  "MiddleColor": "#FF000000",
+                  "MiddleColorValue": 1.0,
+                  "EndColor": "#FFFF0000",
+                  "StartColorValue": 100.0,
+                  "EndColorValue": 800.0,
+                  "Mode": 4,
+                  "TargetPropertyName": "TextColor"
+                }
+              }
+            },
+            {
+              "$id": "14",
+              "$type": "SimHub.Plugins.OutputPlugins.GraphicalDash.Models.TextItem, SimHub.Plugins",
+              "IsTextItem": true,
+              "ShadowDepth": 0,
+              "ShadowBlur": 0,
+              "ShadowDirection": 315,
+              "ShadowColor": "#FF808080",
+              "Font": "Segoe UI",
+              "FontWeight": "Normal",
+              "TextWrapping": 1,
+              "FontStyle": "Normal",
+              "FontSize": 12.0,
+              "Text": "Text",
+              "TextColor": "#FFFFFFFF",
+              "HorizontalAlignment": 0,
+              "VerticalAlignment": 2,
+              "UseMonospacedText": false,
+              "CharWidth": 40.0,
+              "SpecialCharsWidth": 20.0,
+              "SpecialChars": ".,:;",
+              "TextMask": "0000000000",
+              "TextMaskColor": "#FF808080",
+              "Rotation": 0.0,
+              "UseRotation": false,
+              "CanResize": true,
+              "BackgroundColor": "#00FFFFFF",
+              "BlurRadius": 0.0,
+              "EnableBlur": false,
+              "BorderStyle": {
+                "$id": "15",
+                "AllBorders": 0,
+                "AllCornerRadius": 0,
+                "BorderColor": "#FFFFFFFF",
+                "BorderTop": 0,
+                "BorderBottom": 0,
+                "BorderLeft": 0,
+                "BorderRight": 0,
+                "CornerRadius": "0,0,0,0",
+                "RadiusTopLeft": 0,
+                "RadiusTopRight": 0,
+                "RadiusBottomLeft": 0,
+                "RadiusBottomRight": 0,
+                "Bindings": {
+                  "$id": "16"
+                }
+              },
+              "Height": 20.0,
+              "Left": 100.0,
+              "Opacity": 100.0,
+              "Top": 0.0,
+              "Visible": true,
+              "BlinkDelay": 250.0,
+              "BlinkEnabled": false,
+              "Width": 70.0,
+              "BorderBottom": 0,
+              "BorderColor": "#FFFFFFFF",
+              "BorderLeft": 0,
+              "BorderRight": 0,
+              "BorderTop": 0,
+              "Id": "455fb4f8-f748-472b-91b6-cf802a7e8881",
+              "IsFreezed": false,
+              "IsSelected": false,
+              "Name": "JSTestText1",
+              "RenderingSkip": 11,
+              "Sid": 0,
+              "Bindings": {
+                "$id": "17",
+                "Text": {
+                  "$id": "18",
+                  "Formula": {
+                    "$id": "19",
+                    "Interpreter": 1,
+                    "Expression": "\r\nreturn brakesMaxTemp;"
+                  },
+                  "Mode": 2,
+                  "TargetPropertyName": "Text"
+                }
+              }
+            }
+          ]
+        },
+        "Id": "77ba3d6b-5277-41fa-97c1-3a51ad523770",
+        "Name": "Screen1",
+        "Sid": 0,
+        "Bindings": {
+          "$id": "20"
+        }
+      }
+    ]
+  },
+  "SnapToGrid": false,
+  "HideLabels": true,
+  "ShowBoundingRectangles": false,
+  "GridSize": 10,
+  "SelectedScreen": {
+    "$ref": "3"
+  },
+  "Images": {
+    "$id": "21",
+    "$values": []
+  },
+  "Metadata": {
+    "$id": "22",
+    "ScreenCount": 1.0,
+    "InGameScreensIndexs": {
+      "$id": "23",
+      "$values": [
+        0
+      ]
+    },
+    "IdleScreensIndexs": {
+      "$id": "24",
+      "$values": []
+    },
+    "MainPreviewIndex": 0,
+    "IsOverlay": false,
+    "ShowInTaskBar": true,
+    "Width": 170.0,
+    "Height": 20.0,
+    "OverlaySizeWarning": false,
+    "MetadataVersion": 2.0,
+    "EnableOnDashboardMessaging": true,
+    "PitScreensIndexs": {
+      "$id": "25",
+      "$values": []
+    }
+  },
+  "ShowOnScreenControls": true,
+  "ShowInTaskBar": true,
+  "IsOverlay": false,
+  "EnableClickThroughOverlay": true,
+  "EnableOnDashboardMessaging": true
+}

@@ -2350,7 +2350,7 @@
                         "MiddleColorValue": 1.0,
                         "EndColor": "#FFFFFF00",
                         "StartColorValue": -1.0,
-                        "EndColorValue": 10.0,
+                        "EndColorValue": 5.0,
                         "Mode": 4,
                         "TargetPropertyName": "TextColor"
                       }

@@ -1,11 +1,13 @@
 {
-  "Category": "Honda",
+  "Category": "Luvwahraan",
   "Title": null,
-  "Description": "NSX Dash with more informations",
+  "Description": "NSX based Dash, extended",
   "Author": "Luvwahraan",
-  "ScreenCount": 1.0,
+  "ScreenCount": 3.0,
   "InGameScreensIndexs": [
-    0
+    0,
+    1,
+    2
   ],
   "IdleScreensIndexs": [],
   "MainPreviewIndex": 0,
