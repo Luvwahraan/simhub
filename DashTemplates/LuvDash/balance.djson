@@ -163,7 +163,7 @@
                     "BorderRight": 0,
                     "BorderTop": 0,
                     "Id": "c144094a-bb37-4738-ae59-3d240ba4fbde",
-                    "IsSelected": false,
+                    "IsSelected": true,
                     "Name": "grads",
                     "Sid": 0,
                     "Bindings": {
@@ -293,7 +293,7 @@
                     "BorderTop": 0,
                     "Id": "964adb62-7f56-46cc-bd59-7c2df2dc6423",
                     "IsFreezed": false,
-                    "IsSelected": false,
+                    "IsSelected": true,
                     "Name": "throttleGauge",
                     "RenderingSkip": 11,
                     "Sid": 0,

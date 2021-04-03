@@ -1,7 +1,7 @@
 {
   "$id": "1",
   "Version": 2,
-  "Id": "4cfc4ace-059c-46ce-87ec-3f987f080e96",
+  "Id": "6a494aec-fe9b-4067-8601-0f81acbdeb01",
   "BaseHeight": 450,
   "BaseWidth": 690,
   "BackgroundColor": "#FF000000",
@@ -6109,7 +6109,7 @@
                       }
                     },
                     "RenderingSkip": 0,
-                    "ShowSelection": true,
+                    "ShowSelection": false,
                     "CanResize": false,
                     "Childrens": {
                       "$id": "564",
@@ -10158,7 +10158,7 @@
                                   }
                                 },
                                 "RenderingSkip": 0,
-                                "ShowSelection": true,
+                                "ShowSelection": false,
                                 "CanResize": false,
                                 "Childrens": {
                                   "$id": "946",
@@ -10173,13 +10173,13 @@
                                       "ShadowColor": "#FF808080",
                                       "Font": "Segoe UI",
                                       "FontWeight": "Normal",
-                                      "TextWrapping": 1,
+                                      "TextWrapping": 2,
                                       "FontStyle": "Normal",
-                                      "FontSize": 30.0,
-                                      "Text": "message",
+                                      "FontSize": 17.0,
+                                      "Text": "Deuxième Chicane gauche",
                                       "TextColor": "#FFFFFFFF",
                                       "HorizontalAlignment": 1,
-                                      "VerticalAlignment": 0,
+                                      "VerticalAlignment": 1,
                                       "UseMonospacedText": false,
                                       "CharWidth": 40.0,
                                       "SpecialCharsWidth": 20.0,
@@ -10210,7 +10210,7 @@
                                       "Height": 50.0,
                                       "Left": 532.0,
                                       "Opacity": 100.0,
-                                      "Top": 366.0,
+                                      "Top": 364.0,
                                       "Visible": true,
                                       "BlinkDelay": 250.0,
                                       "BlinkEnabled": false,
@@ -10222,7 +10222,7 @@
                                       "BorderTop": 0,
                                       "Id": "dec4850b-10a0-4abd-9a81-aacbe8bfed6a",
                                       "IsFreezed": false,
-                                      "IsSelected": false,
+                                      "IsSelected": true,
                                       "Name": "message",
                                       "RenderingSkip": 23,
                                       "Sid": 0,
@@ -10234,7 +10234,7 @@
                                           "Formula": {
                                             "$id": "952",
                                             "Interpreter": 1,
-                                            "Expression": "return getCarClass();"
+                                            "Expression": "let turn = getTurnName();\r\n\r\nif (turn == '') return getCarClass();\r\nreturn turn;"
                                           },
                                           "Mode": 2,
                                           "TargetPropertyName": "Text"
@@ -10249,7 +10249,7 @@
                                 "Left": 532.0,
                                 "Opacity": 100.0,
                                 "Top": 366.0,
-                                "Visible": false,
+                                "Visible": true,
                                 "BlinkDelay": 250.0,
                                 "BlinkEnabled": false,
                                 "BorderBottom": 0,
@@ -10350,7 +10350,7 @@
                       }
                     },
                     "RenderingSkip": 0,
-                    "ShowSelection": false,
+                    "ShowSelection": true,
                     "CanResize": false,
                     "Childrens": {
                       "$id": "961",
@@ -10698,7 +10698,7 @@
                             }
                           },
                           "RenderingSkip": 0,
-                          "ShowSelection": false,
+                          "ShowSelection": true,
                           "CanResize": false,
                           "Childrens": {
                             "$id": "990",
@@ -11219,7 +11219,7 @@
                                       "BorderTop": 0,
                                       "Id": "d1f9ce6d-e3dd-40a2-bce9-915f7d776f8a",
                                       "IsFreezed": false,
-                                      "IsSelected": true,
+                                      "IsSelected": false,
                                       "Name": "balanceL",
                                       "RenderingSkip": 0,
                                       "Sid": 0,
@@ -13825,7 +13825,7 @@
                   "Formula": {
                     "$id": "1294",
                     "Interpreter": 1,
-                    "Expression": "return !($prop('DataCorePlugin.GamePaused')||$prop('GameRawData.Graphics.IsSetupMenuVisible'));"
+                    "Expression": "if ($prop('ReplayMode') == 'Replay') return 1;\r\n\r\nreturn $prop('ACCCDS_Physics.ignitionOn');\r\nreturn !($prop('DataCorePlugin.GamePaused')||$prop('GameRawData.Graphics.IsSetupMenuVisible'));"
                   },
                   "Mode": 2,
                   "TargetPropertyName": "Visible"
@@ -14074,7 +14074,7 @@
       "$values": []
     },
     "MainPreviewIndex": 0,
-    "IsOverlay": false,
+    "IsOverlay": true,
     "ShowInTaskBar": true,
     "Width": 690.0,
     "Height": 450.0,
@@ -14088,7 +14088,7 @@
   },
   "ShowOnScreenControls": true,
   "ShowInTaskBar": true,
-  "IsOverlay": false,
+  "IsOverlay": true,
   "EnableClickThroughOverlay": true,
   "EnableOnDashboardMessaging": true
 }

@@ -9,7 +9,7 @@
   ],
   "IdleScreensIndexs": [],
   "MainPreviewIndex": 0,
-  "IsOverlay": false,
+  "IsOverlay": true,
   "ShowInTaskBar": true,
   "Width": 690.0,
   "Height": 450.0,
